@@ -8,7 +8,9 @@ A Qlik Sense widget library for version 3.1 and later.
 
 Extract file [irregular-widgets.zip](irregular-widgets.zip) to the extension folder: 
 
-```C:\Users\<username>\Documents\Qlik\Sense\Extensions```
+```
+C:\Users\<username>\Documents\Qlik\Sense\Extensions
+```
 
 **Qlik Sense Server**
 
