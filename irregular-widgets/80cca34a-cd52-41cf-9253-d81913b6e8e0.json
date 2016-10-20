@@ -1,0 +1,121 @@
+{
+  "name": "DynamicLabelTable",
+  "description": "Table with setting expressions for dynamic column labels",
+  "author": "Ralf Becher, irregular.bi",
+  "library": "mywidgets",
+  "meta": {
+    "type": "table"
+  },
+  "properties": {
+    "measures": {
+      "min": 0,
+      "max": 20
+    },
+    "dimensions": {
+      "max": 20,
+      "min": 0
+    },
+    "sorting": true,
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone2-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "dynLabel1",
+        "label": "Label1"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 1,
+        "parent": "header1",
+        "ref": "dynLabel2",
+        "label": "Label2"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 2,
+        "parent": "header1",
+        "ref": "dynLabel3",
+        "label": "Label3"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 3,
+        "parent": "header1",
+        "ref": "dynLabel4",
+        "label": "Label4"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 4,
+        "parent": "header1",
+        "ref": "dynLabel5",
+        "label": "Label5"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 5,
+        "parent": "header1",
+        "ref": "dynLabel6",
+        "label": "Label6"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 6,
+        "parent": "header1",
+        "ref": "dynLabel7",
+        "label": "Label7"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 7,
+        "parent": "header1",
+        "ref": "dynLabel8",
+        "label": "Label8"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 8,
+        "parent": "header1",
+        "ref": "dynLabel9",
+        "label": "Label9"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 9,
+        "parent": "header1",
+        "ref": "dynLabel10",
+        "label": "Label10"
+      }
+    ]
+  }
+}
