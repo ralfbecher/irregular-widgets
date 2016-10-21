@@ -2,7 +2,7 @@
   "name": "DynamicLabelTable",
   "description": "Table with setting expressions for dynamic column labels",
   "author": "Ralf Becher, irregular.bi",
-  "library": "mywidgets",
+  "library": "irregular-widgets",
   "meta": {
     "type": "table"
   },

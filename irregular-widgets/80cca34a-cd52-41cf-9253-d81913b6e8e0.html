@@ -1,33 +1,52 @@
 <style>.wrapper {
-    margin-right:20px;
-	
-	table {
+    table {
+    	margin-right:20px;
+		border-collapse: collapse;
 		thead tr th {
-		border-bottom-style:solid;
-		border-bottom-color:#ccc;
-		border-bottom-width:2px;
-		padding-bottom:5px;
-		text-align:left;
-		color:#808080;
-		font-size:14px;
-		padding:10px;
+		border-bottom-width: 1px;
+    	border-bottom-style: solid;
+    	border-bottom-color: rgb(204, 204, 204);
+		color: #8C8C8C;
+		font-size: 1.15384615em;
+		font-weight: 400;
+		padding-top: 0.4em;
+    	padding-bottom: 0.4em;
+	  	padding-left: 0.30769231em;
+	  	padding-right: 0.61538462em;
 	  }
 	  
 	  tbody tr {
-		  line-height:35px;
-		  border-top-style:solid;
-		  border-top-color:#cccccc;
-		  border-top-width:1px;
+		line-height: 35px;
+		border-bottom-width: 1px;
+    	border-bottom-style: solid;
+    	border-bottom-color: rgb(242, 242, 242);
+		background-color: transparent;
 	  }
-	  tbody td {
-	  	padding-left:10px;
-	  }
+	tbody td {
+	    line-height: 1.23076923;
+		white-space: nowrap;
+		padding-top: 0.4em;
+	  	padding-bottom: 0.4em;
+	  	padding-left: 0.30769231em;
+	  	padding-right: 0.61538462em;
+   		max-height: 3.69230769em;
+		background-color: transparent;
+		}
 	}
-}
 
-
-.center {
-    text-align:center;
+	.cell-align-left {
+		text-overflow: ellipsis;
+		text-align: left;
+	}
+	.cell-align-right {
+		text-overflow: ellipsis;
+	  	text-align: right;
+	}
+	.cell-border-right {
+		border-right-width: 1px;
+    	border-right-style: dotted;
+    	border-right-color: rgb(204, 204, 204);	
+	}
 }</style>
 <div><div class="wrapper">
 <div class="top-header" ng-if="settings.tableHeaderTitle">
@@ -36,15 +55,15 @@
 <table>
 	<thead>
 		<tr>
-			<th ng-repeat="head in data.headers track by $index" class="header" qva-activate="head.orderBy()">
-			<span ng-if="settings['dynLabel'+($index+1)]" style="white-space: pre" >{{settings['dynLabel'+($index+1)]}}</span>
-			<span ng-if="!(settings['dynLabel'+($index+1)])" >{{head.qFallbackTitle}}</span>
+			<th ng-repeat="head in data.headers track by $index" class="header {{$index < (data.headers.length -1) &amp;&amp; ('cell-border-right')}} {{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; ('cell-align-right') || ('cell-align-left')}}" qva-activate="head.orderBy()">
+			<span ng-if="settings['dynLabel'+($index+1)]" style="white-space: pre">{{settings['dynLabel'+($index+1)]}}</span>
+			<span ng-if="!(settings['dynLabel'+($index+1)])">{{head.qFallbackTitle}}</span>
 			</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="row in data.rows track by $index">
-		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable"> {{cell.qText}} </td>
+		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) &amp;&amp; ('cell-border-right')}} {{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; ('cell-align-right') || ('cell-align-left')}}">{{cell.qText}}</td>
 		</tr>
 	</tbody>
 </table>
