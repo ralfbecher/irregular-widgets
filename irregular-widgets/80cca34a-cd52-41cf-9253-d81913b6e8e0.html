@@ -37,7 +37,7 @@
 	<thead>
 		<tr>
 			<th ng-repeat="head in data.headers track by $index" class="header" qva-activate="head.orderBy()">
-			<span ng-if="settings['dynLabel'+($index+1)]" >{{settings['dynLabel'+($index+1)]}}</span>
+			<span ng-if="settings['dynLabel'+($index+1)]" style="white-space: pre" >{{settings['dynLabel'+($index+1)]}}</span>
 			<span ng-if="!(settings['dynLabel'+($index+1)])" >{{head.qFallbackTitle}}</span>
 			</th>
 		</tr>
