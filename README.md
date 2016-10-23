@@ -6,7 +6,7 @@ A Qlik Sense widget library for version 3.1 and later.
 
 **Qlik Sense Desktop**
 
-Extract file [irregular-widgets.zip](irregular-widgets.zip) to the extension folder: 
+Extract file [bi-irregular-widgets.zip](bi-irregular-widgets.zip) to the extension folder: 
 
 ```
 C:\Users\<username>\Documents\Qlik\Sense\Extensions
@@ -14,7 +14,7 @@ C:\Users\<username>\Documents\Qlik\Sense\Extensions
 
 **Qlik Sense Server**
 
-Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and import file [irregular-widgets.zip](irregular-widgets.zip) as extension.
+Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and import file [bi-irregular-widgets.zip](bi-irregular-widgets.zip) as extension.
 
 ## Widgets
 
