@@ -44,8 +44,8 @@
 	}
 	.cell-border-right {
 		border-right-width: 1px;
-    	border-right-style: dotted;
-    	border-right-color: rgb(204, 204, 204);	
+    	border-right-style: solid;
+    	border-right-color: #F2F2F2;	
 	}
 }</style>
 <div><div class="wrapper">
@@ -55,7 +55,7 @@
 <table>
 	<thead>
 		<tr>
-			<th ng-repeat="head in data.headers track by $index" class="header {{$index < (data.headers.length -1) &amp;&amp; ('cell-border-right')}} {{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; ('cell-align-right') || ('cell-align-left')}}" qva-activate="head.orderBy()">
+			<th ng-repeat="head in data.headers track by $index" class="header {{$index < (data.headers.length -1) ? 'cell-border-right' : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? 'cell-align-right' : 'cell-align-left'}}" qva-activate="head.orderBy()">
 			<span ng-if="settings['dynLabel'+($index+1)]" style="white-space: pre">{{settings['dynLabel'+($index+1)]}}</span>
 			<span ng-if="!(settings['dynLabel'+($index+1)])">{{head.qFallbackTitle}}</span>
 			</th>
@@ -63,7 +63,7 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="row in data.rows track by $index">
-		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) &amp;&amp; ('cell-border-right')}} {{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; ('cell-align-right') || ('cell-align-left')}}">{{cell.qText}}</td>
+		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length && cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index >= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') > -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText}}</td>
 		</tr>
 	</tbody>
 </table>

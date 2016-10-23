@@ -18,11 +18,23 @@ Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and impo
 
 ## Widgets
 
-**DynamicLabelTable**
+### DynamicLabelTable
 
 A simple table widget providing 10 expression settings for dynamic column labels (headers). You can use any Qlik expression like aggregations and variables. If no expression is set for a label the default label text will be used instead.
 
 ![DynamicLabelTable](DynamicLabelTableWidget.png)
+
+**Dynamic Coloring**
+
+Extend the measure string with a semicolon + font-color + semicolon + background color:
+
+Use CSS color names:
+
+![DynamicLabelTable](DynamicLabelTableColoring1.png)
+
+Use Qlik color functions:
+
+![DynamicLabelTable](DynamicLabelTableColoring2.png)
 
 ## Author
 
