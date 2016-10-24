@@ -115,7 +115,97 @@
         "parent": "header1",
         "ref": "dynLabel10",
         "label": "Label10"
-      }
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "dynLabel11",
+        "label": "Label11"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 1,
+        "parent": "header1",
+        "ref": "dynLabel12",
+        "label": "Label12"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 2,
+        "parent": "header1",
+        "ref": "dynLabel13",
+        "label": "Label13"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 3,
+        "parent": "header1",
+        "ref": "dynLabel14",
+        "label": "Label14"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 4,
+        "parent": "header1",
+        "ref": "dynLabel15",
+        "label": "Label15"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 5,
+        "parent": "header1",
+        "ref": "dynLabel16",
+        "label": "Label16"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 6,
+        "parent": "header1",
+        "ref": "dynLabel17",
+        "label": "Label17"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 7,
+        "parent": "header1",
+        "ref": "dynLabel18",
+        "label": "Label18"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 8,
+        "parent": "header1",
+        "ref": "dynLabel19",
+        "label": "Label19"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 9,
+        "parent": "header1",
+        "ref": "dynLabel20",
+        "label": "Label20"
+      }        
     ]
   }
 }
