@@ -20,9 +20,9 @@ Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and impo
 
 ### DynamicLabelTable
 
-A simple table widget providing 20 expression settings for dynamic column labels (headers). You can use any Qlik expression like aggregations and variables. If no expression is set for a label the default label text will be used instead.
+A simple table widget (it renders a HTML table and should used for small amounts of data only) providing 20 expression settings for dynamic column labels (headers). You can use any Qlik expression like aggregations and variables. If no expression is set for a label the default label text will be used instead.
 
-For multiple lines use Qlik function chr(10) as new line: ='Some text' & chr(10) & 'new line..'
+For multiple line labels use Qlik function chr(10) as new line: ='Some text' & chr(10) & 'new line..'
 
 ![DynamicLabelTable](DynamicLabelTableWidget.png)
 
