@@ -18,7 +18,7 @@ Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and impo
 
 ## Widgets
 
-### DynamicLabelTable
+### Dynamic Label Table
 
 A simple table widget (it renders a HTML table and should used for small amounts of data only) providing 20 expression settings for dynamic column labels (headers). You can use any Qlik expression like aggregations and variables. If no expression is set for a label the default label text will be used instead.
 

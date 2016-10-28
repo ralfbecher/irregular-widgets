@@ -1,8 +1,8 @@
 {
-  "name": "DynamicLabelTable",
+  "name": "Dynamic Label Table",
   "description": "Table with setting expressions for dynamic column labels",
   "author": "Ralf Becher, irregular.bi",
-  "library": "irregular-widgets",
+  "library": "bi-irregular-widgets",
   "meta": {
     "type": "table"
   },
@@ -27,10 +27,28 @@
     ],
     "settings": [
       {
+        "type": "integer",
+        "expression": "optional",
+        "defaultValue": 20,
+        "order": 0,
+        "parent": "header1",
+        "ref": "maxColumns",
+        "label": "max. Columns"
+      },
+      {
+        "type": "integer",
+        "expression": "optional",
+        "defaultValue": 50,
+        "order": 1,
+        "parent": "header1",
+        "ref": "rowsPerPage",
+        "label": "Rows per page"
+      },
+      {
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 0,
+        "order": 2,
         "parent": "header1",
         "ref": "dynLabel1",
         "label": "Label1"
@@ -39,7 +57,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 1,
+        "order": 3,
         "parent": "header1",
         "ref": "dynLabel2",
         "label": "Label2"
@@ -48,7 +66,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 2,
+        "order": 4,
         "parent": "header1",
         "ref": "dynLabel3",
         "label": "Label3"
@@ -57,7 +75,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 3,
+        "order": 5,
         "parent": "header1",
         "ref": "dynLabel4",
         "label": "Label4"
@@ -66,7 +84,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 4,
+        "order": 6,
         "parent": "header1",
         "ref": "dynLabel5",
         "label": "Label5"
@@ -75,7 +93,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 5,
+        "order": 7,
         "parent": "header1",
         "ref": "dynLabel6",
         "label": "Label6"
@@ -84,7 +102,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 6,
+        "order": 8,
         "parent": "header1",
         "ref": "dynLabel7",
         "label": "Label7"
@@ -93,7 +111,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 7,
+        "order": 9,
         "parent": "header1",
         "ref": "dynLabel8",
         "label": "Label8"
@@ -102,7 +120,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 8,
+        "order": 10,
         "parent": "header1",
         "ref": "dynLabel9",
         "label": "Label9"
@@ -111,7 +129,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 9,
+        "order": 11,
         "parent": "header1",
         "ref": "dynLabel10",
         "label": "Label10"
@@ -120,7 +138,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 0,
+        "order": 12,
         "parent": "header1",
         "ref": "dynLabel11",
         "label": "Label11"
@@ -129,7 +147,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 1,
+        "order": 13,
         "parent": "header1",
         "ref": "dynLabel12",
         "label": "Label12"
@@ -138,7 +156,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 2,
+        "order": 14,
         "parent": "header1",
         "ref": "dynLabel13",
         "label": "Label13"
@@ -147,7 +165,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 3,
+        "order": 15,
         "parent": "header1",
         "ref": "dynLabel14",
         "label": "Label14"
@@ -156,7 +174,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 4,
+        "order": 16,
         "parent": "header1",
         "ref": "dynLabel15",
         "label": "Label15"
@@ -165,7 +183,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 5,
+        "order": 17,
         "parent": "header1",
         "ref": "dynLabel16",
         "label": "Label16"
@@ -174,7 +192,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 6,
+        "order": 18,
         "parent": "header1",
         "ref": "dynLabel17",
         "label": "Label17"
@@ -183,7 +201,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 7,
+        "order": 19,
         "parent": "header1",
         "ref": "dynLabel18",
         "label": "Label18"
@@ -192,7 +210,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 8,
+        "order": 20,
         "parent": "header1",
         "ref": "dynLabel19",
         "label": "Label19"
@@ -201,11 +219,11 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 9,
+        "order": 20,
         "parent": "header1",
         "ref": "dynLabel20",
         "label": "Label20"
-      }        
+      }
     ]
   }
 }

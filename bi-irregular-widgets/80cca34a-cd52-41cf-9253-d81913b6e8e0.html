@@ -48,7 +48,8 @@
     	border-right-color: #F2F2F2;	
 	}
 }</style>
-<div><div class="wrapper">
+<div><div ng-if="settings.maxColumns>0 &amp;&amp; settings.rowsPerPage>0" ng-init="data.model.enigmaModel.applyPatches([{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qHeight', qOp: 'replace', qValue: settings.rowsPerPage.toString()},{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qWidth', qOp: 'replace', qValue: settings.maxColumns.toString()}])"></div>
+<div class="wrapper">
 <div class="top-header" ng-if="settings.tableHeaderTitle">
 	{{settings.tableHeaderTitle}}
 </div>
@@ -63,8 +64,9 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="row in data.rows track by $index">
-		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length && cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index >= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') > -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText}}</td>
+		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index &gt;= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText}}</td>
 		</tr>
 	</tbody>
 </table>
+<lui-button ng-if="data.rowCount>0 &amp;&amp; data.rowCount>data.rows.length" qva-activate="data.getMoreData()">More data ..</lui-button>
 </div></div>
