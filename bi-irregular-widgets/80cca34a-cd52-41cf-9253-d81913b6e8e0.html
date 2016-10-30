@@ -64,7 +64,6 @@
 	}
 }</style>
 <div><div ng-if="settings.maxColumns>0 &amp;&amp; settings.rowsPerPage>0" ng-init="data.model.enigmaModel.applyPatches([{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qHeight', qOp: 'replace', qValue: settings.rowsPerPage.toString()},{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qWidth', qOp: 'replace', qValue: settings.maxColumns.toString()}])"></div>
-<qw-console log="data.totals">
 <div class="wrapper">
 <div class="top-header" ng-if="settings.tableHeaderTitle">
 	{{settings.tableHeaderTitle}}
@@ -93,4 +92,4 @@
 	</tbody>
 </table>
 <lui-button ng-if="settings.showMoreDataButton &amp;&amp; data.rowCount>0 &amp;&amp; data.rowCount>data.rows.length" qva-activate="data.getMoreData()">{{settings.moreDataButtonLabel}}</lui-button>
-</div></qw-console></div>
+</div></div>
