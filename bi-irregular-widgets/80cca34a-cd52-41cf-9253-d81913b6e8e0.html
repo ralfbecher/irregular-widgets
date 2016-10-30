@@ -3,34 +3,34 @@
     	margin-right:20px;
 		border-collapse: collapse;
 		thead tr th {
-		border-bottom-width: 1px;
-    	border-bottom-style: solid;
-    	border-bottom-color: rgb(204, 204, 204);
-		color: #8C8C8C;
-		font-size: 1.15384615em;
-		font-weight: 400;
-		padding-top: 0.4em;
-    	padding-bottom: 0.4em;
-	  	padding-left: 0.30769231em;
-	  	padding-right: 0.61538462em;
-	  }
+		  border-bottom-width: 1px;
+		  border-bottom-style: solid;
+		  border-bottom-color: rgb(204, 204, 204);
+		  color: #8C8C8C;
+		  font-size: 1.15384615em;
+		  font-weight: {{settings.boldLabels ? 900 : 400}};
+		  padding-top: 0.4em;
+		  padding-bottom: 0.4em;
+		  padding-left: 0.30769231em;
+		  padding-right: 0.61538462em;
+		}
 	  
-	  tbody tr {
-		line-height: 35px;
-		border-bottom-width: 1px;
-    	border-bottom-style: solid;
-    	border-bottom-color: rgb(242, 242, 242);
-		background-color: transparent;
-	  }
-	tbody td {
-	    line-height: 1.23076923;
-		white-space: nowrap;
-		padding-top: 0.4em;
-	  	padding-bottom: 0.4em;
-	  	padding-left: 0.30769231em;
-	  	padding-right: 0.61538462em;
-   		max-height: 3.69230769em;
-		background-color: transparent;
+		tbody tr {
+		  line-height: 35px;
+		  border-bottom-width: 1px;
+		  border-bottom-style: solid;
+		  border-bottom-color: rgb(242, 242, 242);
+		  background-color: transparent;
+		}
+		tbody td {
+			line-height: 1.23076923;
+			white-space: nowrap;
+			padding-top: 0.4em;
+			padding-bottom: 0.4em;
+			padding-left: 0.30769231em;
+			padding-right: 0.61538462em;
+			max-height: 3.69230769em;
+			background-color: transparent;
 		}
 	}
 
@@ -47,8 +47,24 @@
     	border-right-style: solid;
     	border-right-color: #F2F2F2;	
 	}
+	.cell-totals-top {
+		font-weight: {{settings.boldTotals ? 900 : 400}};
+		border-bottom-width: 1px;
+    	border-bottom-style: solid;
+    	border-bottom-color: #A6A6A6;	
+	}
+	.cell-totals-bottom {
+		font-weight: {{settings.boldTotals ? 900 : 400}};
+		border-top-width: 1px;
+    	border-top-style: solid;
+    	border-top-color: #A6A6A6;	
+		border-bottom-width: 1px;
+    	border-bottom-style: solid;
+    	border-bottom-color: #F2F2F2;	
+	}
 }</style>
 <div><div ng-if="settings.maxColumns>0 &amp;&amp; settings.rowsPerPage>0" ng-init="data.model.enigmaModel.applyPatches([{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qHeight', qOp: 'replace', qValue: settings.rowsPerPage.toString()},{qPath: '/qHyperCubeDef/qInitialDataFetch/0/qWidth', qOp: 'replace', qValue: settings.maxColumns.toString()}])"></div>
+<qw-console log="data.totals">
 <div class="wrapper">
 <div class="top-header" ng-if="settings.tableHeaderTitle">
 	{{settings.tableHeaderTitle}}
@@ -63,10 +79,18 @@
 		</tr>
 	</thead>
 	<tbody>
+		<tr ng-if="data.qHyperCube.qDimensionInfo.length>0 &amp;&amp; settings.showTotals &amp;&amp; settings.totalsPosition == 'top'">
+          <td ng-repeat="cell in data.qHyperCube.qDimensionInfo track by $index" class="{{$index>1 ? 'cell-border-right' : ''}} cell-totals-top cell-align-left">{{$index == 0 ? settings.totalsLabel : ''}}</td>
+		  <td ng-repeat="cell in data.totals track by $index" class="{{$index < (data.totals.length -1) ? ('cell-border-right') : ''}} cell-totals-top cell-align-right">{{cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText}}</td>
+		</tr>
 		<tr ng-repeat="row in data.rows track by $index">
 		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index &gt;= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText}}</td>
 		</tr>
+		<tr ng-if="data.qHyperCube.qDimensionInfo.length>0 &amp;&amp; settings.showTotals &amp;&amp; settings.totalsPosition == 'bottom'">
+          <td ng-repeat="cell in data.qHyperCube.qDimensionInfo track by $index" class="{{$index>1 ? 'cell-border-right' : ''}} cell-totals-bottom cell-align-left">{{$index == 0 ? settings.totalsLabel : ''}}</td>
+		  <td ng-repeat="cell in data.totals track by $index" class="{{$index < (data.totals.length -1) ? ('cell-border-right') : ''}} cell-totals-bottom cell-align-right">{{cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText}}</td>
+		</tr>
 	</tbody>
 </table>
-<lui-button ng-if="data.rowCount>0 &amp;&amp; data.rowCount>data.rows.length" qva-activate="data.getMoreData()">More data ..</lui-button>
-</div></div>
+<lui-button ng-if="settings.showMoreDataButton &amp;&amp; data.rowCount>0 &amp;&amp; data.rowCount>data.rows.length" qva-activate="data.getMoreData()">{{settings.moreDataButtonLabel}}</lui-button>
+</div></qw-console></div>

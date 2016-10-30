@@ -23,6 +23,13 @@
         "parent": "qw-pe-dropzone2-0",
         "ref": "header1",
         "label": "Settings"
+      },
+      {
+        "type": "header",
+        "order": 1,
+        "parent": "qw-pe-dropzone2-1",
+        "ref": "header2",
+        "label": "Header Labels"
       }
     ],
     "settings": [
@@ -45,11 +52,84 @@
         "label": "Rows per page"
       },
       {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 2,
+        "parent": "header1",
+        "ref": "boldLabels",
+        "label": "Bold Labels"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 3,
+        "parent": "header1",
+        "ref": "showTotals",
+        "label": "Show Totals"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 4,
+        "parent": "header1",
+        "ref": "boldTotals",
+        "label": "Bold Totals"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "top",
+        "options": [
+          {
+            "label": "top",
+            "value": "top"
+          },
+          {
+            "label": "bottom",
+            "value": "bottom"
+          }
+        ],
+        "order": 5,
+        "parent": "header1",
+        "ref": "totalsPosition",
+        "label": "Totals Position"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "Totals",
+        "order": 6,
+        "parent": "header1",
+        "ref": "totalsLabel",
+        "label": "Totals Label"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 7,
+        "parent": "header1",
+        "ref": "showMoreDataButton",
+        "label": "Show \"More data\" Button"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "More data ..",
+        "order": 8,
+        "parent": "header1",
+        "ref": "moreDataButtonLabel",
+        "label": "Button Label"
+      },
+      {
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 2,
-        "parent": "header1",
+        "order": 1,
+        "parent": "header2",
         "ref": "dynLabel1",
         "label": "Label1"
       },
@@ -57,8 +137,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 3,
-        "parent": "header1",
+        "order": 2,
+        "parent": "header2",
         "ref": "dynLabel2",
         "label": "Label2"
       },
@@ -66,8 +146,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 4,
-        "parent": "header1",
+        "order": 3,
+        "parent": "header2",
         "ref": "dynLabel3",
         "label": "Label3"
       },
@@ -75,8 +155,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 5,
-        "parent": "header1",
+        "order": 4,
+        "parent": "header2",
         "ref": "dynLabel4",
         "label": "Label4"
       },
@@ -84,8 +164,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 6,
-        "parent": "header1",
+        "order": 5,
+        "parent": "header2",
         "ref": "dynLabel5",
         "label": "Label5"
       },
@@ -93,8 +173,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 7,
-        "parent": "header1",
+        "order": 6,
+        "parent": "header2",
         "ref": "dynLabel6",
         "label": "Label6"
       },
@@ -102,8 +182,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 8,
-        "parent": "header1",
+        "order": 7,
+        "parent": "header2",
         "ref": "dynLabel7",
         "label": "Label7"
       },
@@ -111,8 +191,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 9,
-        "parent": "header1",
+        "order": 8,
+        "parent": "header2",
         "ref": "dynLabel8",
         "label": "Label8"
       },
@@ -120,8 +200,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 10,
-        "parent": "header1",
+        "order": 9,
+        "parent": "header2",
         "ref": "dynLabel9",
         "label": "Label9"
       },
@@ -129,8 +209,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 11,
-        "parent": "header1",
+        "order": 10,
+        "parent": "header2",
         "ref": "dynLabel10",
         "label": "Label10"
       },
@@ -138,8 +218,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 12,
-        "parent": "header1",
+        "order": 11,
+        "parent": "header2",
         "ref": "dynLabel11",
         "label": "Label11"
       },
@@ -147,8 +227,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 13,
-        "parent": "header1",
+        "order": 12,
+        "parent": "header2",
         "ref": "dynLabel12",
         "label": "Label12"
       },
@@ -156,8 +236,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 14,
-        "parent": "header1",
+        "order": 13,
+        "parent": "header2",
         "ref": "dynLabel13",
         "label": "Label13"
       },
@@ -165,8 +245,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 15,
-        "parent": "header1",
+        "order": 14,
+        "parent": "header2",
         "ref": "dynLabel14",
         "label": "Label14"
       },
@@ -174,8 +254,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 16,
-        "parent": "header1",
+        "order": 15,
+        "parent": "header2",
         "ref": "dynLabel15",
         "label": "Label15"
       },
@@ -183,8 +263,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 17,
-        "parent": "header1",
+        "order": 16,
+        "parent": "header2",
         "ref": "dynLabel16",
         "label": "Label16"
       },
@@ -192,8 +272,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 18,
-        "parent": "header1",
+        "order": 17,
+        "parent": "header2",
         "ref": "dynLabel17",
         "label": "Label17"
       },
@@ -201,8 +281,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 19,
-        "parent": "header1",
+        "order": 18,
+        "parent": "header2",
         "ref": "dynLabel18",
         "label": "Label18"
       },
@@ -210,8 +290,8 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 20,
-        "parent": "header1",
+        "order": 19,
+        "parent": "header2",
         "ref": "dynLabel19",
         "label": "Label19"
       },
@@ -220,7 +300,7 @@
         "expression": "optional",
         "defaultValue": "",
         "order": 20,
-        "parent": "header1",
+        "parent": "header2",
         "ref": "dynLabel20",
         "label": "Label20"
       }

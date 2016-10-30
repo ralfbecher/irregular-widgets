@@ -26,6 +26,10 @@ For multiple line labels use Qlik function chr(10) as new line: ='Some text' & c
 
 ![DynamicLabelTable](DynamicLabelTableWidget.png)
 
+**Settings**
+
+![DynamicLabelTable](DynamicLabelTableSettings.png)
+
 **Dynamic Coloring**
 
 Extend the measure string with a semicolon + font-color + semicolon + background color:
