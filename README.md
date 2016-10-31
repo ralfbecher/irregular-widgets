@@ -30,6 +30,8 @@ For multiple line labels use Qlik function chr(10) as new line: ='Some text' & c
 
 ![DynamicLabelTable](DynamicLabelTableSettings.png)
 
+Please notice that settings "max. Columns" and "Rows per page" effect the underlaying HyperCube and take place if the Mashup is reloaded (F5).
+
 **Dynamic Coloring**
 
 Extend the measure string with a semicolon + font-color + semicolon + background color:
@@ -41,6 +43,8 @@ Use CSS color names:
 Use Qlik color functions:
 
 ![DynamicLabelTable](DynamicLabelTableColoring2.png)
+
+If you want to sort by a measure with color coding you need to wrap it into a Dual() function.
 
 ## Author
 
