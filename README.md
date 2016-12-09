@@ -66,7 +66,7 @@ image:/content/default/logos/logo1.jpg;{'height':10}
 
 **Column Sorting**
 
-Column sorting can be changed by click on field label. This works for dimensions and measure.
+Column sorting can be changed by click on field label. This works for dimensions and measures.
 
 ## Author
 
