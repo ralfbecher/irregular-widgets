@@ -2,7 +2,8 @@
     table {
     	margin-right:20px;
 		border-collapse: collapse;
-		thead tr th {
+        
+        thead tr th {
 		  border-bottom-width: 1px;
 		  border-bottom-style: solid;
 		  border-bottom-color: rgb(204, 204, 204);
@@ -13,15 +14,21 @@
 		  padding-bottom: 0.4em;
 		  padding-left: 0.30769231em;
 		  padding-right: 0.61538462em;
-		}
-	  
-		tbody tr {
+		  cursor: pointer; cursor: hand;
+        }
+        
+        thead th:hover {
+          background-color: #F8F8F8;
+        }
+        
+        tbody tr {
 		  line-height: 35px;
 		  border-bottom-width: 1px;
 		  border-bottom-style: solid;
 		  border-bottom-color: rgb(242, 242, 242);
 		  background-color: transparent;
 		}
+        
 		tbody td {
 			line-height: 1.23076923;
 			white-space: nowrap;
@@ -72,6 +79,7 @@
 	<thead>
 		<tr>
 			<th ng-repeat="head in data.headers track by $index" class="header {{$index < (data.headers.length -1) ? 'cell-border-right' : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? 'cell-align-right' : 'cell-align-left'}}" qva-activate="head.orderBy()">
+			<i ng-if="head.isOrderedBy" qva-activate="head.reverseOrder()" ng-class="{ 'icon-triangle-top': head.qSortIndicator === 'A','icon-triangle-bottom': head.qSortIndicator === 'D'}"></i>
 			<span ng-if="settings['dynLabel'+($index+1)]" style="white-space: pre">{{settings['dynLabel'+($index+1)]}}</span>
 			<span ng-if="!(settings['dynLabel'+($index+1)])">{{head.qFallbackTitle}}</span>
 			</th>
@@ -83,7 +91,7 @@
 		  <td ng-repeat="cell in data.totals track by $index" class="{{$index < (data.totals.length -1) ? ('cell-border-right') : ''}} cell-totals-top cell-align-right">{{cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText}}</td>
 		</tr>
 		<tr ng-repeat="row in data.rows track by $index">
-		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index &gt;= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText}}</td>
+		  <td ng-repeat="cell in row.cells track by $index" qva-activate="cell.select()" class="selectable {{$index < (row.cells.length -1) ? ('cell-border-right') : ''}} {{$index >= data.qHyperCube.qDimensionInfo.length ? ('cell-align-right') : ('cell-align-left')}}" style="{{$index >= data.qHyperCube.qDimensionInfo.length &amp;&amp; cell.qText.indexOf(';') > -1 ? 'color:' + cell.qText.split(';',3)[1] + ';background-color:' + cell.qText.split(';',3)[2]: ''}}">{{$index &gt;= data.qHyperCube.qDimensionInfo.length ? (cell.qText.indexOf(';') &gt; -1 ? cell.qText.substring(0,cell.qText.indexOf(';')) : cell.qText) : cell.qText.substring(0,6) == 'image:' ? '' : cell.qText}}<img ng-if="cell.qText.substring(0,6) == 'image:'" ng-src="{{cell.qText.substring(6,cell.qText.indexOf(';'))}}" ng-style="{{cell.qText.substring(cell.qText.indexOf(';')+1)}}"></td>
 		</tr>
 		<tr ng-if="data.qHyperCube.qDimensionInfo.length>0 &amp;&amp; settings.showTotals &amp;&amp; settings.totalsPosition == 'bottom'">
           <td ng-repeat="cell in data.qHyperCube.qDimensionInfo track by $index" class="{{$index>1 ? 'cell-border-right' : ''}} cell-totals-bottom cell-align-left">{{$index == 0 ? settings.totalsLabel : ''}}</td>

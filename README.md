@@ -46,6 +46,28 @@ Use Qlik color functions:
 
 If you want to sort by a measure with color coding you need to wrap it into a Dual() function.
 
+**Display Images**
+
+You can encode an image URL and CSS style in the fields data to display images in cells
+
+Syntax of expression:
+
+1. image:
+2. URL
+3. ;
+4. {CSS style JSON}
+
+
+Example:
+
+```
+image:/content/default/logos/logo1.jpg;{'height':10}
+```
+
+**Column Sorting**
+
+Column sorting can be changed by click on field label. This works for dimensions and measure.
+
 ## Author
 
 **Ralf Becher**
