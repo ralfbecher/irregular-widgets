@@ -2,6 +2,8 @@
 
 A Qlik Sense widget library for version 3.1 and later.
 
+Also a little playground to break the limitations of Qlik Sense Widgets by using Angular expressions.
+
 ## Installation
 
 **Qlik Sense Desktop**
@@ -24,11 +26,11 @@ A simple table widget (it renders a HTML table and should used for small amounts
 
 For multiple line labels use Qlik function chr(10) as new line: ='Some text' & chr(10) & 'new line..'
 
-![DynamicLabelTable](DynamicLabelTableWidget.png)
+![DynamicLabelTableWidget](DynamicLabelTableWidget.png)
 
 **Settings**
 
-![DynamicLabelTable](DynamicLabelTableSettings.png)
+![DynamicLabelTableSettings](DynamicLabelTableSettings.png)
 
 Please notice that settings "max. Columns" and "Rows per page" effect the underlaying HyperCube and take place if the Mashup is reloaded (F5).
 
@@ -38,11 +40,11 @@ Extend the measure string with a semicolon + font-color + semicolon + background
 
 Use CSS color names:
 
-![DynamicLabelTable](DynamicLabelTableColoring1.png)
+![DynamicLabelTableColoring1](DynamicLabelTableColoring1.png)
 
 Use Qlik color functions:
 
-![DynamicLabelTable](DynamicLabelTableColoring2.png)
+![DynamicLabelTableColoring2](DynamicLabelTableColoring2.png)
 
 If you want to sort by a measure with color coding you need to wrap it into a Dual() function.
 
@@ -63,6 +65,8 @@ Example:
 ```
 image:/content/default/logos/logo1.jpg;{'height':10}
 ```
+
+![DynamicLabelTableImage](DynamicLabelTableImage.png)
 
 **Column Sorting**
 
