@@ -18,9 +18,9 @@ C:\Users\<username>\Documents\Qlik\Sense\Extensions
 
 Open Qlik Sense QMC on [https://yourserver/qmc](https://yourserver/qmc) and import file [bi-irregular-widgets.zip](bi-irregular-widgets.zip) as extension.
 
-## Widgets
+# Widgets
 
-### Dynamic Label Table
+## Dynamic Label Table
 
 A simple table widget (it renders a HTML table and should used for small amounts of data only) providing 20 expression settings for dynamic column labels (headers). You can use any Qlik expression like aggregations and variables. If no expression is set for a label the default label text will be used instead.
 
@@ -72,7 +72,7 @@ image:/content/default/logos/logo1.jpg;{'height':10}
 
 Column sorting can be changed by click on field label. This works for dimensions and measures.
 
-### Sheet Selection Trigger
+## Sheet Selection Trigger
 
 A widget to define a selection for one dimension and a value (expression can be used here) to process this selection on a sheet when sheet is opened.
 
