@@ -78,7 +78,7 @@ A widget to define a selection for one dimension and a value (expression can be 
 
 ![DynamicLabelTableImage](img/SheetSelectionTriggerSettings.png)
 
-For design time it displays the parameters (also the result of a value expression) and a test button. After successful testing you switch of the display and selection is processed automatically if the sheet is opened where you placed this widget.
+For design time it displays the parameters (also the result of a value expression) and a test button. After successful testing you switch off the display and selection is processed automatically if the sheet is opened where you placed this widget.
 
 ![DynamicLabelTableImage](img/SheetSelectionTriggerWidget.png)
 
