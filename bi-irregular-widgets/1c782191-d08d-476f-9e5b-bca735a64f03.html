@@ -1,0 +1,12 @@
+<style></style>
+<div><div ng-if="!settings.showTestButton &amp;&amp; settings.dimension1 != '' &amp;&amp; settings.value1 !='' && settings.valueDataType1 == 'text'" ng-init="app.field(settings.dimension1).selectValues([{qText:settings.value1}])"></div>
+<div ng-if="!settings.showTestButton &amp;&amp; settings.dimension1 != '' &amp;&amp; settings.value1 !='' && settings.valueDataType1 == 'number'" ng-init="app.field(settings.dimension1).selectValues([{qNumber:(settings.value1 -0), qIsNumeric:true}])"></div>
+<p ng-if="settings.showTestButton">
+<b>Settings for selection:</b><br>
+Dimension: {{settings.dimension1}}<br>
+Value: {{settings.value1}}<br>
+Type: {{settings.valueDataType1}}<br>
+<small>Unchecking 'Show test button' activates the sheet selection trigger</small>
+</p>
+<lui-button ng-if="settings.showTestButton && settings.valueDataType1 == 'text'" ng-click="app.field(settings.dimension1).selectValues([{qText:settings.value1}])">Test selection</lui-button>
+<lui-button ng-if="settings.showTestButton && settings.valueDataType1 == 'number'" ng-click="app.field(settings.dimension1).selectValues([{qNumber:(settings.value1 -0), qIsNumeric:true}])">Test selection</lui-button></div>

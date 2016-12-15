@@ -2,7 +2,8 @@
   "name": "irregular-widgets",
   "type": "widget-library",
   "widgets": [
-    "80cca34a-cd52-41cf-9253-d81913b6e8e0"
+    "80cca34a-cd52-41cf-9253-d81913b6e8e0",
+    "1c782191-d08d-476f-9e5b-bca735a64f03"
   ],
   "description": "Widgets provided by Ralf Becher, irregular.bi"
 }

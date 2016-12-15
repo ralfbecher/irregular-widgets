@@ -26,11 +26,11 @@ A simple table widget (it renders a HTML table and should used for small amounts
 
 For multiple line labels use Qlik function chr(10) as new line: ='Some text' & chr(10) & 'new line..'
 
-![DynamicLabelTableWidget](DynamicLabelTableWidget.png)
+![DynamicLabelTableWidget](img/DynamicLabelTableWidget.png)
 
 **Settings**
 
-![DynamicLabelTableSettings](DynamicLabelTableSettings.png)
+![DynamicLabelTableSettings](img/DynamicLabelTableSettings.png)
 
 Please notice that settings "max. Columns" and "Rows per page" effect the underlaying HyperCube and take place if the Mashup is reloaded (F5).
 
@@ -40,11 +40,11 @@ Extend the measure string with a semicolon + font-color + semicolon + background
 
 Use CSS color names:
 
-![DynamicLabelTableColoring1](DynamicLabelTableColoring1.png)
+![DynamicLabelTableColoring1](img/DynamicLabelTableColoring1.png)
 
 Use Qlik color functions:
 
-![DynamicLabelTableColoring2](DynamicLabelTableColoring2.png)
+![DynamicLabelTableColoring2](img/DynamicLabelTableColoring2.png)
 
 If you want to sort by a measure with color coding you need to wrap it into a Dual() function.
 
@@ -66,11 +66,21 @@ Example:
 image:/content/default/logos/logo1.jpg;{'height':10}
 ```
 
-![DynamicLabelTableImage](DynamicLabelTableImage.png)
+![DynamicLabelTableImage](img/DynamicLabelTableImage.png)
 
 **Column Sorting**
 
 Column sorting can be changed by click on field label. This works for dimensions and measures.
+
+### Sheet Selection Trigger
+
+A widget to define a selection for one dimension and a value (expression can be used here) to process this selection on a sheet when sheet is opened.
+
+![DynamicLabelTableImage](img/SheetSelectionTriggerSettings.png)
+
+For design time it shows parameters and a test button. After successful testing you switch of the display and seelction is processed automatically on the sheet you placed this widget.
+
+![DynamicLabelTableImage](img/SheetSelectionTriggerWidget.png)
 
 ## Author
 

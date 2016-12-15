@@ -1,0 +1,68 @@
+{
+  "name": "Sheet Selection Trigger",
+  "description": "Processes a selection on sheet when rendered (initially)",
+  "author": "Ralf Becher, irregular.bi",
+  "library": "bi-irregular-widgets",
+  "meta": {
+    "type": "navigation"
+  },
+  "properties": {
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone0-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "dimension1",
+        "label": "Dimension"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 1,
+        "parent": "header1",
+        "ref": "value1",
+        "label": "Value"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 3,
+        "parent": "header1",
+        "ref": "showTestButton",
+        "label": "Show test button"
+      },
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "text",
+        "options": [
+          {
+            "label": "Text",
+            "value": "text"
+          },
+          {
+            "label": "Number",
+            "value": "number"
+          }
+        ],
+        "order": 2,
+        "parent": "header1",
+        "ref": "valueDataType1",
+        "label": "Value Data Type"
+      }
+    ]
+  }
+}
